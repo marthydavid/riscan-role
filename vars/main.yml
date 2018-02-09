@@ -1,0 +1,8 @@
+version: '2.6.1'
+package:
+  url: "{{repo_url}}"
+  path: 'C:\Windows\Temp\SetupRiSCAN_PRO_64_bit.exe'
+  version: '2.6.1'
+  product_id: "RiSCAN PRO"
+  args: '/S /D=C:\Riegl_LMS\RiSCAN_PRO_{{version}}'
+  stat: 'C:\Riegl_LMS\RiSCAN_PRO_{{version}}'

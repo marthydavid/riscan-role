@@ -1,0 +1,20 @@
+- name: Is riscan Installed?
+  win_stat:
+    path: "{{ package.stat }}"
+  register: riscan
+
+- name: Download riscan from local "repo"
+  win_get_url:
+    force: no
+    url: "{{ package.url }}"
+    dest: "{{ package.path }}"
+
+- name: Install riscan
+  win_package:
+    #creates_path: "{{ package.stat }}"
+    state: present
+    path: '{{ package.path }}'
+    #creates_version: "{{ package.version }}"
+    product_id: '{{ package.product_id }}'
+    arguments: "{{ package.args }}"
+  when: not riscan.stat.exists

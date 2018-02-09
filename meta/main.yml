@@ -1,0 +1,15 @@
+galaxy_info:
+  author: David Marthy
+  description: role for installing RiSCAN Pro
+  company: Budapest Kozut
+  license: license (GPLv2)
+
+  min_ansible_version: 2.2
+  
+  platforms:
+  - name: Windows
+  versions:
+  - all
+
+  galaxy_tags: []
+  dependencies: []
